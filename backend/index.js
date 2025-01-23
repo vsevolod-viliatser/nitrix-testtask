@@ -11,6 +11,6 @@ connectDB();
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/api/apartments", apartmentRoutes);
-
+app.use(express.static(path.join(__dirname, 'dist')));
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
