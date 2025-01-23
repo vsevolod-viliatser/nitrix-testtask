@@ -12,10 +12,10 @@ connectDB();
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/api/apartments", apartmentRoutes);
-// Раздача статических файлов
+// Раздача статических файлов из папки frontend/dist
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-// Обработка остальных маршрутов для React
+// Обработка всех остальных маршрутов (для React)
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
