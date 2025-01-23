@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
-const API_URL = import.meta.env.VITE_API_URL;
+// Для продакшн-окружения можно использовать относительный путь
+const API_URL = import.meta.env.VITE_API_URL || '/api/apartments';
 
 export const fetchApartments = createAsyncThunk("apartments/fetch", async (filters) => {
   const response = await axios.get(API_URL, { params: filters });
@@ -49,6 +49,7 @@ const apartmentSlice = createSlice({
       });
   },
 });
+
 console.log(import.meta.env.VITE_API_URL);
 
 export default apartmentSlice.reducer;
