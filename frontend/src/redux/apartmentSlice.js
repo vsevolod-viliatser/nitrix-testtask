@@ -1,26 +1,24 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// Для продакшн-окружения можно использовать относительный путь
-const API_URL = import.meta.env.VITE_API_URL || '/api/apartments';
 
 export const fetchApartments = createAsyncThunk("apartments/fetch", async (filters) => {
-  const response = await axios.get(API_URL, { params: filters });
+  const response = await axios.get('/api/apartments', { params: filters });
   return response.data;
 });
 
 export const addApartment = createAsyncThunk("apartments/add", async (apartment) => {
-  const response = await axios.post(API_URL, apartment);
+  const response = await axios.post('/api/apartments', apartment);
   return response.data;
 });
 
 export const updateApartment = createAsyncThunk("apartments/update", async ({ id, apartment }) => {
-  const response = await axios.put(`${API_URL}/${id}`, apartment);
+  const response = await axios.put(`'/api/apartments'/${id}`, apartment);
   return response.data;
 });
 
 export const deleteApartment = createAsyncThunk("apartments/delete", async (id) => {
-  await axios.delete(`${API_URL}/${id}`);
+  await axios.delete(`'/api/apartments'/${id}`);
   return id;
 });
 
