@@ -13,12 +13,12 @@ export const addApartment = createAsyncThunk("apartments/add", async (apartment)
 });
 
 export const updateApartment = createAsyncThunk("apartments/update", async ({ id, apartment }) => {
-  const response = await axios.put(`/api/apartments'/${id}`, apartment);
+  const response = await axios.put(`/api/apartments/${id}`, apartment);
   return response.data;
 });
 
 export const deleteApartment = createAsyncThunk("apartments/delete", async (id) => {
-  await axios.delete(`/api/apartments'/${id}`);
+  await axios.delete(`/api/apartments/${id}`);
   return id;
 });
 
