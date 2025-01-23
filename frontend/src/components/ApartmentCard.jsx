@@ -8,7 +8,12 @@ const ApartmentCard = ({ apartment, onEdit }) => {
   const dispatch = useDispatch();
 
   return (
-    <Card sx={{ maxWidth: 700, margin: 2 }}>
+    <Card sx={{
+      maxWidth: 700,
+      margin: "16px auto", // Центрирует карточки
+      width: "100%",
+      boxShadow: 3,
+    }}>
       <CardContent>
         <Typography variant="h6" component="div">
           {apartment.title}
