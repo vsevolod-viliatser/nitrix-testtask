@@ -1,10 +1,11 @@
 require("dotenv").config();
 const express = require("express");
+const path = require("path")
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const connectDB = require("./db");
 const apartmentRoutes = require("./routes/apartmentRoutes");
-const path = require("path")
+
 const app = express();
 connectDB();
 
