@@ -1,0 +1,16 @@
+{
+    "name": "fullstack-app",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "node backend/index.js",
+      "build": "cd frontend && npm install && npm run build",
+      "dev": "cd frontend && npm run dev"
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    },
+    "devDependencies": {
+      "vite": "^2.0.0"
+    }
+  }
+  
