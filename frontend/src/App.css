@@ -1,11 +1,13 @@
 /* index.css */
-html,
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
 }
 
 #root {
@@ -13,7 +15,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100%; /* Используем height вместо min-height */
+  width: 100%;
+  height: 100%;
 }
 
 .apartment-list {
@@ -21,10 +24,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  max-width: 1200px;
-  margin: 16px auto; /* Добавляем отступ сверху */
-  padding: 0 16px; /* Удобство для мобильных */
+  margin: 16px 0;
+  padding: 0 16px;
 }
+
 
 button {
   margin: 20px 0;
