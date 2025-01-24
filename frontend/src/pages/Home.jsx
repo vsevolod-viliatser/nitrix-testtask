@@ -37,7 +37,19 @@ const Home = () => {
       }}
     >
       <Filters onFilter={handleFilter} filtersApplied={filtersApplied} />
-      <button onClick={() => setShowForm(true)}>Додати квартиру</button>
+      <Button
+  variant="contained"
+  color="primary"
+  onClick={() => setShowForm(true)}
+  sx={{
+    marginBottom: 3,
+    padding: "10px 20px",
+    fontSize: "16px",
+    borderRadius: "8px",
+  }}
+>
+  Додати квартиру
+</Button>
       {showForm && (
         <ApartmentForm
           apartment={selectedApartment}
