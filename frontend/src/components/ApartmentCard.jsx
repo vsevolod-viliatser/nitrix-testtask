@@ -8,12 +8,17 @@ const ApartmentCard = ({ apartment, onEdit }) => {
   const dispatch = useDispatch();
 
   return (
-    <Card sx={{
-      maxWidth: 700,
-      margin: "16px auto", // Центрирует карточки
-      width: "100%",
-      boxShadow: 3,
-    }}>
+    <Card
+  sx={{
+    maxWidth: "100%", // Занимает всю ширину на мобильных
+    margin: "16px auto",
+    padding: 2,
+    boxShadow: 3,
+    "@media (min-width: 768px)": {
+      maxWidth: 700, // Ограничение ширины для больших экранов
+    },
+  }}
+>
       <CardContent>
         <Typography variant="h6" component="div">
           {apartment.title}
