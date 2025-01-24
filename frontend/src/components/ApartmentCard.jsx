@@ -8,15 +8,12 @@ const ApartmentCard = ({ apartment, onEdit }) => {
   const dispatch = useDispatch();
 
   return (
-    <Card
+<Card
   sx={{
-    maxWidth: "100%", // Занимает всю ширину на мобильных
-    margin: "16px auto",
+    width: "100%", // Используем 100% ширины
+    margin: "16px 0", // Отступы только сверху и снизу
     padding: 2,
     boxShadow: 3,
-    "@media (min-width: 768px)": {
-      maxWidth: 700, // Ограничение ширины для больших экранов
-    },
   }}
 >
       <CardContent>
