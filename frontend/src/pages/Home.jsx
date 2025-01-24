@@ -4,7 +4,7 @@ import { fetchApartments } from "../redux/apartmentSlice";
 import ApartmentForm from "../components/ApartmentForm";
 import ApartmentCard from "../components/ApartmentCard";
 import Filters from "../components/Filters";
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 const Home = () => {
   const dispatch = useDispatch();
